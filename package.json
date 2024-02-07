@@ -1,19 +1,16 @@
 {
-  "name": "mortgagecalculator",
+  "name": "chartjs-example",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/brookesy26/Mortgage-Calculator.git"
+  "devDependencies": {
+    "parcel": "^2.6.2"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/brookesy26/Mortgage-Calculator/issues"
-  },
-  "homepage": "https://github.com/brookesy26/Mortgage-Calculator#readme"
+  "dependencies": {
+    "@cubejs-client/core": "^0.31.0",
+    "chart.js": "^4.0.0"
+  }
 }

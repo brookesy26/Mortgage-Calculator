@@ -6,7 +6,7 @@
   font-family: base.$font-stack;
   display: grid;
   grid-template-columns: base.$outer-grid-column-width repeat(2, 1fr) base.$outer-grid-column-width;
-  grid-template-rows: repeat(2, fit-content);
+  grid-template-rows: auto;
   width: base.$mortgage-Calc-width;
   row-gap: base.$row-gap;
 }
@@ -41,7 +41,7 @@
   grid-row: 2/3;
   display: grid;
   grid-template-columns: subgrid;
-  grid-template-rows: repeat(5, fit-content);
+  grid-template-rows: auto;
   gap: base.$row-gap;
   .one-column-field-left{
     grid-column: 1/2;
@@ -66,7 +66,7 @@
     border-radius: 0.3rem;
     height: 25px;
     background-color: base.$input-color;
-
+    padding-left: 5px;
   }
 
   #submit{
@@ -89,4 +89,26 @@
   margin: 0 .62rem 0 0;
 }
 
+#repayment-heading{
+  grid-column: 2/4;
+  font-size: base.$Secondary-heading;
+  padding: base.$double-padding 0;
+}
 
+#repaymentText{
+  grid-column: 2/4;
+}
+
+#myChart{
+  grid-column: 1/5;
+  padding: 0 base.$single-padding;
+}
+
+#TermYearButton{
+  grid-column: 2/4;
+  // border: none;
+  // border-radius: 0.3rem;
+  // height: 40px;
+  // background-color: base.$Primary-color;
+  // color: base.$Secondary-color;
+}
