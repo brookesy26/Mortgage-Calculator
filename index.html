@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Font link required-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!--Style Sheet required-->
+  <link rel="stylesheet" href="css/style.css">  
+
+  <title>Mortgage Calculator</title>
+</head>
+
+<body>  
+    <!--widget container-->
+  <section id="mortgage-wrapper">
+      <!--heading area-->
+    <article id="intro-heading">
+      <h1>Mortgage Calculator</h1>
+      <p id="heading-para">Calculate your monthly mortgage payments by filling in the fields below.</p>  
+    </article>
+  <!--heading end-->
+
+  <!--Form-->
+    <form id="mortgage-calculator-form">
+      <label for="house-price" class="two-column-field label-field">
+        House Price 
+        <input type="number" id="house-price" placeholder="£000,000.00" class="input-field" required>
+      </label>
+
+      <label for="deposit-amount" class="two-column-field label-field">
+        Deposit Amount 
+        <input type="number" id="deposit-amount" placeholder="£000,000.00" class="input-field" required>
+      </label>
+
+      <label for="interest-rate" class="one-column-field-left label-field">
+        Interest Rate %
+        <input type="number" id="interest-rate" placeholder="0.0%" class="input-field" min="1" max="15" required>
+      </label>
+
+      <label for="mortgage-term" class="one-column-field-right label-field">
+        Mortgage Term
+        <input type="number" id="mortgage-term" placeholder="1 - 40 Years" class="input-field" min="1" max="40" required>
+      </label>
+
+      <label for="consent-checkbox" class="two-column-field row">
+        <input type="checkbox" id="consent-checkbox" required>
+        I consent to the use of my data for calculation purposes. 
+      </label>
+    <!--Calls Submit function on click-->
+      <button class="submit" type="submit" onclick="formSubmit()">Calculate</button>
+    </form>
+    <!--form end-->
+
+  </section>
+    <!--widget container End-->
+
+    <!--javascript file required-->
+  <script src="js/script.js"></script>
+    <!--chart js file required-->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>
