@@ -1,11 +1,16 @@
-//Edit the following lines to match your system
-
+// primary styles - edit to match your system
+//change to fit container - recommended default: 100% <- Important change to fit container
+$mortgage-Calc-width: 380px; 
 // Default 'Roboto', sans-serif
 $font-stack: 'Roboto', sans-serif;
 // Default #11828d
 $Primary-color: #11828d;
 // Default #ffffff
 $Secondary-color: #ffffff;
+// Default 1.25rem - set to zero to remove padding <-- Recommended for compact space
+$widget-padding: 1.25rem;
+
+// Secondary Styles edit for more specific styling
 // Default #EAEEFF;
 $input-color: #EAEEFF;
 // Default '#6C6C6C';
@@ -14,11 +19,8 @@ $misc-color: '#6C6C6C';
 $Border-radius: 0.3rem;
 // Default 1rem;
 $text-sizing: 1rem;
-// Default 1.25rem - set to zero to remove padding
-$widget-padding: 1.25rem;
 
 // DO NOT EDIT - variables for multiple elements
-$mortgage-Calc-width: 100%;
 $row-gap: 0.62rem;
 $Primary-heading: 1.3rem;
 $Secondary-heading: 1.2rem;
