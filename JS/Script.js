@@ -189,7 +189,7 @@ Applied as inline on click function to submit form button
 Sets origin form view state for useage in resetWidget
 Calls mortgage Formula with values
 Removes the form
-Calls breakdownView function 
+Calls breakdownView function  
 */
 function formSubmit(){
   const form = getId('mortgage-calculator-form');
@@ -204,6 +204,7 @@ function formSubmit(){
     const mortgageTerm = getId('mortgage-term').value;
     const repaymentCost = mortgageFormula(housePrice, depositAmount, interestRate, mortgageTerm);
     form.remove();
+    
     breakdownView(container, repaymentCost, mortgageTerm, formViewHtml);
   });
 }
