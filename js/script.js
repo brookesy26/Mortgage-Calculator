@@ -156,6 +156,7 @@ function resetWidget(breakdownViewContainer, defaultFormView){
   restartBut.addEventListener('click', () => {
     breakdownViewContainer.innerHTML = '';
     breakdownViewContainer.innerHTML = defaultFormView;
+    formSubmit();
   });
 }
 
@@ -191,16 +192,24 @@ Calls mortgage Formula with values
 Removes the form
 Calls breakdownView function 
 */
+function formSubmit(){
   const form = getId('mortgage-calculator-form');
-  form.addEventListener('submit', e => {
-    const container = getId('mortgage-wrapper');
-    const formViewHtml = container.innerHTML;
-    e.preventDefault()
-    const housePrice = getId('house-price').value; 
-    const depositAmount = getId('deposit-amount').value;
-    const interestRate = getId('interest-rate').value;
-    const mortgageTerm = getId('mortgage-term').value;
-    const repaymentCost = mortgageFormula(housePrice, depositAmount, interestRate, mortgageTerm);
-    form.remove();
-    breakdownView(container, repaymentCost, mortgageTerm, formViewHtml);
-  });
+  if (form){
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      const container = getId('mortgage-wrapper');
+      const formViewHtml = container.innerHTML;
+      e.preventDefault()
+      const housePrice = getId('house-price').value; 
+      const depositAmount = getId('deposit-amount').value;
+      const interestRate = getId('interest-rate').value;
+      const mortgageTerm = getId('mortgage-term').value;
+      const repaymentCost = mortgageFormula(housePrice, depositAmount, interestRate, mortgageTerm);
+      form.remove();
+      breakdownView(container, repaymentCost, mortgageTerm, formViewHtml);
+    })
+  }
+};
+
+formSubmit();
