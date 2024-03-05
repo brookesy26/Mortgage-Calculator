@@ -185,18 +185,16 @@ function breakdownView(widgetContantainer, repaymentCost, mortgageTerm, formView
 }
 
 /*
-Applied as inline on click function to submit form button
-Sets origin form view state for useage in resetWidget
+adds a listener for form submission
+Sets form view state for useage in resetWidget
 Calls mortgage Formula with values
 Removes the form
 Calls breakdownView function 
 */
-function formSubmit(){
   const form = getId('mortgage-calculator-form');
-  const container = getId('mortgage-wrapper');
-  const formViewHtml = container.innerHTML;
-
   form.addEventListener('submit', e => {
+    const container = getId('mortgage-wrapper');
+    const formViewHtml = container.innerHTML;
     e.preventDefault()
     const housePrice = getId('house-price').value; 
     const depositAmount = getId('deposit-amount').value;
@@ -206,4 +204,3 @@ function formSubmit(){
     form.remove();
     breakdownView(container, repaymentCost, mortgageTerm, formViewHtml);
   });
-}
